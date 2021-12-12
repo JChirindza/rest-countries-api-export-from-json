@@ -68,35 +68,6 @@ a{
 	color:#17a2b8;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f3f3f3;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #ddd;
-}
-
-li a.active {
-    color: white;
-    background-color: #04AA6D;
-}
-
 .item-right {
     float: right;
 }
@@ -106,12 +77,75 @@ li a.active {
 	justify-content: center !important;
 }
 
-.header {
-	border: 1px solid var(--borderColor);
+.container {
+	padding: 0 20px;
 }
 
-/* Countries */
+.d-none {
+	display: none;
+}
 
+/****** Header ******/
+.header {
+	border-bottom: 1px solid var(--borderColor);
+    background-color: #f3f3f3;
+
+}
+
+.header li a.active {
+    color: white;
+    background-color: #04AA6D;
+}
+
+.header li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+@media (max-width: 300px) {
+	.header .item span {
+		 display: none;
+	}
+}
+
+@media (max-width: 576px) {
+   .header .item span {
+		display: none;
+   }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 1200px) {
+   
+}
+/********/
+
+/* Countries */
 .countries {
 	margin: 0 20px
 }
@@ -175,4 +209,9 @@ li a.active {
 
 .grid .text .button i{
 	padding: 0 7px 0 0; 
+}
+
+/* Country details */
+.country {
+
 }
