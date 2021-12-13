@@ -7,7 +7,7 @@ const Header = () => {
                 <div className="container">
                     <ul>
                         <div className="item item-left">
-                            <li><a className="" href="/"><i className="fas fa-globe"></i> <span>World Countries</span></a></li>
+                            <li><a className="nav-logo" href="/"><i className="fas fa-globe"></i> <span>World Countries</span></a></li>
                         </div>
                         <div className="item item-right">
                             <li><a href="#"><i className="fas fa-search"></i> <span>Search</span></a></li>
