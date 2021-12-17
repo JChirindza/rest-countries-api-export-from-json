@@ -179,12 +179,22 @@ const Country = () => {
                                         Export/Download files
                                     </h3>
                                     <h4 className="text-muted item-center">
-                                        <span> .csv; .xls;.xml;</span>
+                                        <span> .xml; .json; .csv; .xls;</span>
                                     </h4>
                                 </div>
 
                                 <div className="download-btn">
                                     <div className="d-grid justify-content-center">
+                                        <button
+                                            onClick={() =>
+                                                download("xml", c, name.common)
+                                            }
+                                            className="btn btn-primary btn-sm"
+                                        >
+                                            <i className="fas fa-download"></i>{" "}
+                                            Download XML file
+                                        </button>
+
                                         <button
                                             onClick={() =>
                                                 download("json", c, name.common)
@@ -212,15 +222,6 @@ const Country = () => {
                                         >
                                             <i className="fas fa-download"></i>{" "}
                                             Download XLS file(Excel)
-                                        </button>
-                                        <button
-                                            onClick={() =>
-                                                download("xml", c, name.common)
-                                            }
-                                            className="btn btn-primary btn-sm"
-                                        >
-                                            <i className="fas fa-download"></i>{" "}
-                                            Download XML file
                                         </button>
                                     </div>
                                 </div>
