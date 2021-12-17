@@ -319,6 +319,28 @@ a {
     box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.1);
 }
 
+.country .downloads {
+    padding: 0 0 40px 0;
+}
+
+.country .downloads .download-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.country .downloads .download-btn button {
+    border: 1px solid var(--borderColor);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.country .downloads .download-btn button:hover {
+    background: var(--previewBg);
+    cursor: pointer;
+    color: var(--mainText);
+}
+
 @media (min-width: 992px) {
     .country article .country-inner {
         display: grid;

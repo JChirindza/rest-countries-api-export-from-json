@@ -49,10 +49,6 @@ const Country = () => {
                             title="Back home"
                         ></i>
                     </Link>
-
-                    <div className="go-to-downloads">
-                        <i className="fas fa-download"></i>
-                    </div>
                 </div>
                 {country.map((c) => {
                     const {
@@ -189,9 +185,6 @@ const Country = () => {
 
                                 <div className="download-btn">
                                     <div className="d-grid justify-content-center">
-                                        <h4 className="d-flex justify-content-center">
-                                            Export File:
-                                        </h4>
                                         <button
                                             onClick={() =>
                                                 download("json", c, name.common)
