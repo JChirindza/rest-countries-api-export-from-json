@@ -373,3 +373,10 @@ a {
         max-width: 1400px;
     }
 }
+
+.spinner {
+    max-width: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
