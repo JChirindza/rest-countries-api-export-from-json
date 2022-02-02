@@ -94,11 +94,41 @@ a {
 }
 
 .container {
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .d-none {
     display: none;
+}
+
+@media (max-width: 300px) {
+    .container {
+        padding: 0 2px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
 }
 
 
@@ -256,6 +286,46 @@ a {
     padding: 0 7px 0 0;
 }
 
+@media (max-width: 300px) {
+    .countries .countries-title {
+        padding: 4px 0;
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .countries .countries-title {
+        padding: 6px 0;
+        font-size: 16px;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .countries .countries-title {
+        padding: 8px 0;
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 992px) {
+    .countries .countries-title {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .countries .countries-title {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+}
+
 
 /* Country details */
 
@@ -379,4 +449,133 @@ a {
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+
+/* SearchBox */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.filters .searchBox {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 50%;
+    background: #f1f1f1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+}
+
+.filters .searchBox:hover {
+    background: white;
+}
+
+.filters .searchBox:hover,
+.filters .selectBox:hover {
+    box-shadow: 0 0 0 0.2rem rgba(198, 199, 199, 0.5);
+}
+
+.filters .selectBox {
+    float: left;
+    font-size: 17px;
+    color: rgb(92, 92, 92);
+    border: 1px solid grey;
+    background: #f1f1f1;
+    padding: 10px;
+    float: right;
+    border-left: 0;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+.filters .selectBox:hover {
+    background: white;
+    cursor: pointer;
+    color: black;
+}
+
+.filters::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.filters .searchBox:focus,
+.filters .selectBox:focus {
+    background: white;
+}
+
+.filters .searchBox:focus,
+.filters .selectBox:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(136, 159, 218, 0.5);
+}
+
+@media (max-width: 300px) {
+    .filters {
+        margin-bottom: 15px;
+    }
+    .filters .searchBox {
+        padding: 6px;
+        font-size: 14px;
+        width: 50%;
+    }
+    .filters .selectBox {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .filters {
+        margin-bottom: 25px;
+    }
+    .filters .searchBox {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        margin-bottom: 25px;
+    }
+    .filters .searchBox {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .filters {
+        margin-bottom: 25px;
+    }
+    .filters .searchBox {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .filters {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+    .filters .searchBox {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 50%;
+        background: #f1f1f1;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+    }
 }

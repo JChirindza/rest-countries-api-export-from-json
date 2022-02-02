@@ -25,6 +25,7 @@ const Header = () => {
                                 <a
                                     href="https://github.com/JChirindza/rest-countries-api-export-from-json-react"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     <i className="fab fa-github"></i>{" "}
                                     <span>Github repo</span>
