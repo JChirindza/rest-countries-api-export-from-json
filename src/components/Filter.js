@@ -82,11 +82,18 @@ const Filter = ({
                     type="text"
                     className="searchBox"
                     id="searchBox"
-                    placeholder="Type to Search..."
+                    placeholder="Search..."
                     name="searchBox"
                     autoComplete="off"
+                    required
                     onChange={(e) => searchCountries(e.target.value)}
                 />
+                <button
+                    class="clearBtn"
+                    type="reset"
+                    title="Clear search"
+                ></button>
+
                 <div>
                     <select
                         name="selectBox"
