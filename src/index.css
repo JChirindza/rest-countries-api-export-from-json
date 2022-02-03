@@ -219,10 +219,13 @@ a {
     margin-bottom: 40px;
 }
 
-.countries .countries-title {
+.countries .countries-title h1 {
     padding: 10px 0;
     font-size: 30px;
     letter-spacing: 1px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(82, 82, 82);
 }
 
 .countries .grid {
@@ -287,42 +290,37 @@ a {
 }
 
 @media (max-width: 300px) {
-    .countries .countries-title {
-        padding: 4px 0;
-        font-size: 14px;
-        letter-spacing: 4px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 576px) {
-    .countries .countries-title {
-        padding: 6px 0;
-        font-size: 16px;
-        letter-spacing: 4px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .countries .countries-title {
-        padding: 8px 0;
-        font-size: 18px;
-        letter-spacing: 4px;
-    }
-}
-
-@media (max-width: 992px) {
-    .countries .countries-title {
+    .countries .countries-title h1 {
+        padding: 10px 0;
         font-size: 20px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 }
 
-@media (max-width: 1200px) {
-    .countries .countries-title {
+@media (min-width: 301px) and (max-width: 576px) {
+    .countries .countries-title h1 {
+        padding: 14px 0;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .countries .countries-title h1 {
+        padding: 16px 0;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .countries .countries-title h1 {
+        padding: 18px 0;
         font-size: 26px;
-        letter-spacing: 4px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .countries .countries-title h1 {
+        padding: 22px 0;
     }
 }
 
@@ -634,4 +632,54 @@ a {
 
 .searchBox:not(:valid)~.clearBtn {
     display: none;
+}
+
+
+/* Offline Snackbar */
+
+.snackbar {
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    border: 1px solid rgb(118, 115, 115);
+}
+
+.snackbar .close-snackbar:hover {
+    background: rgb(63, 63, 63);
+    color: white;
+    cursor: pointer;
+}
+
+.snackbar #wifiIconOff {
+    font-size: 17px;
+    color: rgb(138, 134, 134);
+}
+
+.snackbar #wifiIconOn {
+    font-size: 17px;
+    color: rgb(15, 175, 26);
+}
+
+.snackbar label {
+    padding-left: 15px;
+    color: white;
+}
+
+.snackbar .close-snackbar {
+    border-radius: 50%;
+    border: 0;
+    padding: 7px;
+    text-align: center;
+    background: #333;
+    border: 1px solid rgb(118, 115, 115);
+    margin-left: 15px;
+    color: rgb(177, 170, 170);
 }
