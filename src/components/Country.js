@@ -9,7 +9,6 @@ function download(exportType, data, countryName) {
         "ccn3",
         "flags",
         "name",
-        "nativeName",
         "population",
         "region",
         "subregion",
@@ -59,7 +58,6 @@ const Country = () => {
                             ccn3,
                             flags,
                             name,
-                            nativeName,
                             population,
                             region,
                             subregion,
@@ -89,7 +87,26 @@ const Country = () => {
                                             <h5>
                                                 Native Name:{" "}
                                                 <span>
-                                                    {/* {name.nativeName[0].common} */}
+                                                    {Object.keys(
+                                                        name.nativeName
+                                                    ).map((n) => (
+                                                        <ul
+                                                            key={
+                                                                name.nativeName[
+                                                                    n
+                                                                ]
+                                                            }
+                                                        >
+                                                            <li>
+                                                                {
+                                                                    name
+                                                                        .nativeName[
+                                                                        n
+                                                                    ].common
+                                                                }
+                                                            </li>
+                                                        </ul>
+                                                    ))}
                                                 </span>
                                             </h5>
                                             <h5>
@@ -114,32 +131,54 @@ const Country = () => {
                                                 Top Level Domain:{" "}
                                                 <span>{tld}</span>
                                             </h5>
-                                            {/* <h5>Currencies: 
-                                <span>
-                                    {
-                                        currencies.map((cur) => {
-                                            return (
-                                                <ul key={cur}>
-                                                    <li>{cur}</li>
-                                                </ul>
-                                            )
-                                        })
-                                    }
-                                </span>
-                            </h5> */}
-                                            {/* <h5>Languages: 
-                                <span>
-                                    {
-                                        languages.map((lang) => {
-                                            return (
-                                                <ul key={lang}>
-                                                    <li>{lang}</li>
-                                                </ul>
-                                            )
-                                        })
-                                    }
-                                </span>
-                            </h5> */}
+
+                                            <h5>
+                                                Languages:
+                                                <span>
+                                                    {Object.keys(languages).map(
+                                                        (lang) => (
+                                                            <ul
+                                                                key={
+                                                                    languages[
+                                                                        lang
+                                                                    ]
+                                                                }
+                                                            >
+                                                                <li>
+                                                                    {
+                                                                        languages[
+                                                                            lang
+                                                                        ]
+                                                                    }
+                                                                </li>
+                                                            </ul>
+                                                        )
+                                                    )}
+                                                </span>
+                                            </h5>
+
+                                            <h5>
+                                                Currencies:
+                                                <span>
+                                                    {Object.keys(
+                                                        currencies
+                                                    ).map((key) => {
+                                                        return (
+                                                            <ul key={key}>
+                                                                <li>
+                                                                    {
+                                                                        currencies[
+                                                                            key
+                                                                        ].name
+                                                                    }
+                                                                    {" > "}
+                                                                    {key}
+                                                                </li>
+                                                            </ul>
+                                                        );
+                                                    })}
+                                                </span>
+                                            </h5>
                                         </div>
                                     </div>
                                 </div>
@@ -177,6 +216,8 @@ const Country = () => {
                                         })}
                                     </div>
                                 </div>
+
+                                {console.log(c)}
 
                                 {/* Downloads */}
                                 <div className="downloads" id="downloads">
