@@ -6,8 +6,8 @@ This is a simple web page that provides some information about every country in 
 
 ### DASHBOARD
 
-![web-page-filter](./images/live_demo_filters.png)
+![web-page-filter](public/images/live_demo_filters.png)
 
 ### COUNTRY
 
-![web-page-country](./images/live_demo_country.png)
+![web-page-country](public/images/live_demo_country.png)
