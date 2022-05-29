@@ -1,4 +1,4 @@
-# rest-countries-api-export-from-json-react
+# Rest Countries Api React
 This is a simple web page that provides some information about every country in the world. Those information comes from a Rest-Countries API.
 
 
